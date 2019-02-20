@@ -10,7 +10,7 @@ app.post('/bermi_website', bodyParser.json(), (req, res) => {
     setTimeout(()=>{
       exec(`sudo docker pull ${req.body.repository.repo_name}:${req.body.push_data.tag} &&
           sudo docker rm $(sudo docker stop bermi_website) &&
-          sudo docker run -d --name bermi_website -p 8085:8085 ${req.body.repository.repo_name}:${req.body.push_data.tag}`
+          sudo docker run --rm -d --name bermi_website -p 8085:8085 ${req.body.repository.repo_name}:${req.body.push_data.tag}`
         ,function (err, out, code) {})
     }, delay)
 })
