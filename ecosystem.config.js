@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'API',
+    name: 'bermi-webhook',
     script: 'index.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
