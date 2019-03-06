@@ -22,4 +22,4 @@ app.get('/test', (req, res) => {
     res.send(env)
 })
 
-app.listen(1000, () => console.log('app listening on port 3000!'))
+app.listen(3000, () => console.log('app listening on port 3000!'))
